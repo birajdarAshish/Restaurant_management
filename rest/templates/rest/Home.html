@@ -1,0 +1,29 @@
+{% extends "rest/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <p>
+      <h1> AA Restaurant Management.<br></h1>
+    </p>
+     <fieldset>
+      <legend>Select</legend>
+    <form method='POST'>
+   
+      <ul>
+        <li><a href= "{% url 'Employee' %}">Employee details</a></li>
+        <li><a href="{% url 'menu' %}">Menu</a></li>
+        <li><a href="{% url 'order'%}">Order</a></li>
+        <li><a href="Bill.html">Bill</a></li>
+      </ul>
+
+       
+      </form>
+      </fieldset>
+   
+   <a href="{% url 'logout' %}">Logout</a>
+    
+  
+
+
+{%  endblock content%}
+

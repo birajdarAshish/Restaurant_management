@@ -1,0 +1,36 @@
+{% extends "rest/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <form method='POST'>
+      <fiedset>
+      <table class="table table-bordered">
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Department</th>
+        </tr>
+        {% for e in emp%}
+        <tr >
+         <td> <a href="{% url 'E_detail' e.e_id %}">{{ e.name }}</a></td>
+          <td>{{ e.age }}</td>
+          <td>{{ e.salary }}</td>
+          <td>{{ e.d_no }}</td>
+        </tr>
+      
+        {% endfor %}
+        </table>
+      </fiedset>
+      <a href="{% url 'E_insert' %}">Add new Employee</a>
+        
+       
+      </form>
+   
+   <a href="{% url 'logout' %}">Logout</a>
+    
+  
+
+
+{%  endblock content%}
+

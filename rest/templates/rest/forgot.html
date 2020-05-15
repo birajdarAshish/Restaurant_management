@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link href="{% static 'css/styles1.css' %}" rel="stylesheet" type="text/css" >
+  	<title>
+  		Forgot Password?
+  	</title>
+  	<body>
+  		<p>Verify It's You</p>
+      <form>
+        {% csrf_token %}
+  		  <label for="usr">Email Id</label>
+  		  <input type="Email" name="usr" id="usr" placeholder="Enter Email"  color="black" height="80" width="300" required minlength="7"><br>
+  		  <button type="submit">Get OTP</button>
+     </form>
+  	</body>
+	</head>
+</html>

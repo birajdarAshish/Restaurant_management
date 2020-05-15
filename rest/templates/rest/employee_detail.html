@@ -1,0 +1,27 @@
+{% extends "rest/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    {% csrf_token%}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">{{object.name}}
+       </div>
+       <div class="article-content">
+        <div>Age :{{object.age}}</div>
+        <div>Salary:{{object.salary}}</div>
+        <div>Department :{{object.d_no}}</div>
+        <div>Contact :{{object.contact_no}}</div>
+        <div>Address :{{object.address}}</div>
+      </div>
+
+
+    </div>
+  </article>
+      
+        
+    
+  
+
+
+{%  endblock content%}

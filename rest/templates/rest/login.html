@@ -1,0 +1,29 @@
+{% extends "rest/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <p>
+      <h1> AA Restaurant Management.<br></h1>
+    </p>
+    <filedset>
+      <legend>Login</legend>
+    <div class="container">
+      <form method='POST'>
+       {% csrf_token %}
+       {{ form|crispy }}
+
+       <div><button type=submit>Login</button></div>
+      </form>
+    </div>
+  
+    
+        <p1><h6 class="small"> Need an Account?</h6>
+      <a href="Signup">SignUp</a>
+    </p1>
+  </filedset>
+    
+  
+
+
+{%  endblock content%}
+

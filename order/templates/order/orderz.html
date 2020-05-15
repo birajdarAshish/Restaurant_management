@@ -1,0 +1,35 @@
+{% extends "order/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <form method='POST'>
+      {% csrf_token %}
+      <fiedset>
+      <table class="table table-bordered">
+        <tr>
+        <th>Item </th>
+        <th>Qty</th>
+        </tr>
+        {% for menu in menus %}
+        <tr >
+         <label for="qty"><td>Item: {{ menu.name }} </br>Price:Rs
+          {{ menu.price }}</td><</label>
+          <td>
+            <input name="{{menu.item_no}}" id='qty' type="number" width="50" max="10" min="0" value="0"></td>
+        </tr>
+      
+        {% endfor %}
+        </table>
+        <button type="submit">Order</button>
+    </p>
+      </fiedset>
+
+        
+       
+      </form>
+   
+    
+  
+
+
+{%  endblock content%}
