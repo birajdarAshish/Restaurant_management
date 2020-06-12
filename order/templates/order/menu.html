@@ -1,16 +1,18 @@
-{% extends "order/base.html" %}
+{% extends "rest/base1.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
    
     <form method='POST'>
       <fiedset>
-      <table class="table table-bordered">
+      <table class="table table-stripped">
+        <thead class="thead-light">
         <tr>
           <th>Name</th>
           <th>Category</th>
           <th>Veg/Non-Veg</th>
           <th>Price</th>
         </tr>
+      </thead>
         {% for menu in menus %}
         <tr >
          <td> {{ menu.name }}</td>

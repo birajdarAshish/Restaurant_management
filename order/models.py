@@ -21,7 +21,7 @@ class bill(models.Model):
 		ordering = ['date']
 
 	def __str__(self):
-		return self.b_id
+		return string(self.b_id)
 
 
 class orders(models.Model):
@@ -32,9 +32,8 @@ class orders(models.Model):
     cost=models.IntegerField()
 
     def cost(self):
-    	return self.menu.price * self.qty
+    	return self.item.price * self.qty
     
-    def __str__(self):
-    	return self.item
+
 
 

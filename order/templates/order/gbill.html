@@ -1,0 +1,26 @@
+{% extends "rest/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+   <div class="content-section bg-light text-dark">
+    <table class="table tabe-responsive">
+      <thead class=" thead-dark text-white">
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+        {% for order in orderzz %}
+        <tr >
+         <td> {{ order.item.name }}</td>
+          <td>{{ order.qty }}</td>
+          <td>{{ order.cost }}</td>
+                            </tr>
+                          </table>
+          
+          {% endfor %}
+  
+
+
+{%  endblock content%}

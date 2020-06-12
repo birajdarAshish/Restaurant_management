@@ -2,13 +2,19 @@
 {% load crispy_forms_tags %}
 {% block content %}
    
-    <p>
-      <h1> AA Restaurant Management.<br></h1>
-    </p>
-    <h2>You have been Logged Out</h2>
-      <a href="{% url 'login' %}">Login Again?</a></div>
+    <div class="wrap">
+     <div class="container-fluid bg-dark">
+    <div class="content-section">
+    <div class="border-bottom mb-4">
+    <h2 class="text-white">You have been Logged Out</h2>
+</div>
+       <div class="pad">
+      <a href="{% url 'login' %}" class="btn btn-primary">Login Again?</a>
+  </div>
     </p1>
-    
+    </div>
+</div>
+</div>
   
 
 

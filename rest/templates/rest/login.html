@@ -5,22 +5,32 @@
     <p>
       <h1> AA Restaurant Management.<br></h1>
     </p>
-    <filedset>
-      <legend>Login</legend>
-    <div class="container">
-      <form method='POST'>
+    <div class="wrapper">
+      <div class="container-fluid bg-dark text-white">
+    <div class="content-section" >
+    <filedset class="form-group">
+      <legend class="border-bottom mb-4">Log In </legend>
+      
+    
+    
+      <form method='POST' id="test" >
        {% csrf_token %}
        {{ form|crispy }}
 
-       <div><button type=submit>Login</button></div>
+       <div><button type=submit class="btn btn-primary">Login</button></div>
       </form>
-    </div>
+   
+
   
-    
-        <p1><h6 class="small"> Need an Account?</h6>
-      <a href="Signup">SignUp</a>
+    <div  class="border-top mb-4">
+        <p1><h6 class="small text-light"> Need an Account?</h6>
+      <a href="Signup" >SignUp</a>
     </p1>
+  </div>
   </filedset>
+</div>
+</div>
+</div>
     
   
 

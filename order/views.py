@@ -19,7 +19,6 @@ def order(request):
 		bills= bill()
 		bills.amt=0
 		bills.save()
-		print(request.POST.get(6))
 		for men in me:
 			i=men.item_no
 			if request.POST.get(str(i))!='0':
@@ -33,8 +32,11 @@ def order(request):
 
 				bills.amt =costs+bills.amt
 				bills.save()
-				i=i+1
-		return redirect('Home')
+				context1={
+				'orderzz':orders.objects.filter(b_no=bills),
+				'bil':bill.objects.get(b_id=bills.b_id)
+				}
+		return render(request,'order/gbill.html',context1)
 	else:
 		return render(request,'order/orderz.html',context)
 @login_required
@@ -46,5 +48,13 @@ def menus(request):
 
 	return render(request,'order/menu.html',context)
 
+@login_required
+def billings(request):
+	context ={
+
+        'billss':bill.objects.all()
+	}
+
+	return render(request,'order/bills.html',context)
 	
 

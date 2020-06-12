@@ -1,0 +1,35 @@
+{% extends "rest/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <form method='POST'>
+      <fiedset>
+      <table class="table table-stripped bg-dark text-white position-sticky">
+        <tr>
+          <th>Bill Number</th>
+          <th>Amount </th>
+          <th>Date And Time</th>
+        </tr>
+        {% for b in billss%}
+        <tr >
+         <td> {{ b.b_id }}</td>
+          
+          <td>{{ b.amt }}</td>
+          <td>{{ b.date }}</td>
+        </tr>
+      
+        {% endfor %}
+        </table>
+      </fiedset>
+    
+        
+       
+      </form>
+   
+   <a href="{% url 'logout' %}">Logout</a>
+    
+  
+
+
+{%  endblock content%}
+

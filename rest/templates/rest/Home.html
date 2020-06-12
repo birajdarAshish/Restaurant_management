@@ -1,24 +1,50 @@
-{% extends "rest/base.html" %}
+{% extends "rest/base1.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
    
-    <p>
-      <h1> AA Restaurant Management.<br></h1>
-    </p>
-     <fieldset>
-      <legend>Select</legend>
-    <form method='POST'>
-   
-      <ul>
-        <li><a href= "{% url 'Employee' %}">Employee details</a></li>
-        <li><a href="{% url 'menu' %}">Menu</a></li>
-        <li><a href="{% url 'order'%}">Order</a></li>
-        <li><a href="Bill.html">Bill</a></li>
-      </ul>
-
-       
-      </form>
-      </fieldset>
+     <div class="wrapper1">
+      <div class="card">
+  <div class="card-header">
+    Employee
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Details and Management</h5>
+    <p class="card-text">Maintain employee details edit and more</p>
+    <a href="{% url 'Employee' %}"   class="btn btn-primary">Go</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Menu
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Restaurant Menu</h5>
+    <p class="card-text">Show list of items price etc</p>
+    <a href="{% url 'menu' %}"   class="btn btn-primary">Go</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Generate Bills
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Generate Bills for Dine inns</h5>
+    <p class="card-text">Print bills and store </p>
+    <a href="{% url 'order'%}"   class="btn btn-primary">Go</a>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Bill
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Fetch Bills</h5>
+    <p class="card-text">Show Bill details</p>
+    <a href="{% url 'bills'%}"   class="btn btn-primary">Go</a>
+  </div>
+</div>
+</div>
+  
    
    <a href="{% url 'logout' %}">Logout</a>
     

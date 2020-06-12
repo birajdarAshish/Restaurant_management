@@ -1,28 +1,37 @@
-{% extends "order/base.html" %}
+{% extends "rest/base1.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
    
-    <form method='POST'>
+    <form class="content-section bg-dark text-white" method='POST' id="wrapper2">
       {% csrf_token %}
-      <fiedset>
-      <table class="table table-bordered">
-        <tr>
-        <th>Item </th>
-        <th>Qty</th>
-        </tr>
+  <div class="form-group row border-bottom mb-4">
+    <div class="col">
+      <h6> Item</h6>
+    </div>
+    <div class="col">
+      <h6> Quantity</h6>
+    </div>
+  </div>
+     
         {% for menu in menus %}
-        <tr >
-         <label for="qty"><td>Item: {{ menu.name }} </br>Price:Rs
-          {{ menu.price }}</td><</label>
-          <td>
-            <input name="{{menu.item_no}}" id='qty' type="number" width="50" max="10" min="0" value="0"></td>
-        </tr>
-      
+       <div class="form-group row border-bottom mb-4">
+    <div class="col">
+      <label for="qty"><h6>Item: {{ menu.name }} </h6>
+        <h6>Price : Rs
+          {{ menu.price }}</h6></label>
+    </div>
+    <div class="col">
+      <input name="{{menu.item_no}}" class="" id='qty' type="number" width="50" max="10" min="0" value="0">
+    </div>
+  </div>
+        
+            
         {% endfor %}
-        </table>
-        <button type="submit">Order</button>
-    </p>
-      </fiedset>
+        
+
+        
+        <button class="btn btn-primary" type="submit">Generate Bill</button>
+    
 
         
        

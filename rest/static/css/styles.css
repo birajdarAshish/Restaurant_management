@@ -1,8 +1,3 @@
-nav{
-	background-color: gray;
-
-
-}
 h1 {
 	font-family : cursive;
 	font-style: italic;
@@ -19,24 +14,44 @@ h1 {
 	
 	
 }
-legend{
-	color:white;
+.nav{
+	opacity: 0.1;
+}
+#centre{
+	margin-left: 350px;
+	width:600px;
+}
+#what{
+	padding:10px;
+}
+.wrapper{
+	margin-top: 100px;
+	margin-left:450px;
+	width:500px;
+}
+.wrap{
+	margin-left:450px;
+	width:500px;
+	height:300px;
+}
+.wrapper1{
+	margin-left:450px;
+	width:500px;
+}
+.pad{
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+
 }
  body{
  	padding 20px;
  	margin-top: 40px;
-    background-color: black;
+    background-image: url("r.jpg");
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
  }
 
-form{
-	width: 500px;
-	margin-top:40px;
- 	margin-right:300px;
- 	margin-left:300px;
- 	color:white;
-   
-
-}
 button{
   margin-bottom:10px;
 }
@@ -60,4 +75,19 @@ a{
 table{
 	margin-top:100px;
 	color:white;
+}
+.table-hover{
+	margin-left:400px;
+	width:450px;
+	background-color: white;
+	font: white; 
+}
+.table-stripped{
+	
+	width:800px;
+	background-color: white;
+	font: white; 
+	font-size: 15px;
+	font-style: italic;
+	
 }

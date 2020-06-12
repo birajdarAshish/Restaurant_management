@@ -17,4 +17,3 @@ class Employee(forms.ModelForm):
 	class Meta:
 		model= employee
 		fields=['name','age','e_id','salary','d_no']
-
