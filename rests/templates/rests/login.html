@@ -1,0 +1,35 @@
+{% extends "rests/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="wrapper">
+      <div class="container-fluid bg-dark text-white">
+    <div class="content-section" >
+    <filedset class="form-group">
+      <legend class="border-bottom mb-4">AA Restaurnat Management</legend>
+      
+    
+    
+      <form method='POST' id="test" >
+       {% csrf_token %}
+       {{ form|crispy }}
+
+       <div><button type=submit class="btn btn-primary">Login</button></div>
+      </form>
+   
+
+  
+    <div  class="border-top mb-4">
+        <p1><h6 class="small text-light"> Need an Account?</h6>
+      <a href="Signup" >SignUp</a>
+    </p1>
+  </div>
+  </filedset>
+</div>
+</div>
+</div>
+    
+  
+
+
+{%  endblock content%}
+

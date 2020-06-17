@@ -1,0 +1,60 @@
+{% extends "rests/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    {% csrf_token%}
+    <div class="wrapper">
+    <div class="content-section bg-dark text-light">
+      <div class="border-bottom border-primary bg-light text-dark  ash"><h3>Employee Details</h3>
+      <div>
+  
+<a class="btn btn-outline-primary btn-sm mb-1 mt-1 " href=" {% url 'E_update' object.e_id %}">Update</a>
+<a class="btn btn-outline-danger  btn-sm mb-1 mt-1" href=" {% url 'E_delete' object.e_id %}">Delete</a>
+</div>
+</div>
+
+      <table class="table table-hover bg-light text-dark">
+  <thead>
+    <tr class=" bg-danger text-light">
+      <th scope="row">Name</th> 
+      <th > {{object.name}}</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Age</th>
+      <th >{{object.age}}</th>
+     
+    </tr>
+<tr>
+      <th scope="row">Salary</th>
+      <th>{{object.salary}}</th>
+     
+    </tr>
+    <tr>
+      <th scope="row">Department</th>
+      <th>{{object.d_no.dname}}</th>
+     
+    </tr>
+    <tr>
+      <th scope="row">Contact </th>
+      <th>{{object.contact_no}}</th>
+     
+    </tr>
+    <tr>
+      <th scope="row">Address</th>
+      <th>{{object.address}}</th>
+     
+    </tr>
+
+  </tbody>
+</table>
+<div class="border-bottom border-primary"></div>
+
+
+    </div>
+  </div>
+      
+        
+{%  endblock content%}

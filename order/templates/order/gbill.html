@@ -1,9 +1,9 @@
-{% extends "rest/base1.html" %}
+{% extends "rests/base1.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
    
    <div class="content-section bg-light text-dark">
-    <table class="table tabe-responsive">
+    <table class="table-stripped">
       <thead class=" thead-dark text-white">
         <tr>
           <th>Name</th>
@@ -12,11 +12,13 @@
         </tr>
       </thead>
         {% for order in orderzz %}
+        <tbody>
         <tr >
          <td> {{ order.item.name }}</td>
           <td>{{ order.qty }}</td>
           <td>{{ order.cost }}</td>
                             </tr>
+                          </tbody>
                           </table>
           
           {% endfor %}

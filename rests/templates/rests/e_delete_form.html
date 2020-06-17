@@ -1,0 +1,17 @@
+{% extends "rests/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <form method='POST'>
+    	<div class="wrapper">
+      <div class="content-section">
+      	<p>Do You want to delete this Employee?</p>
+      <div>
+     <button class="btn btn-outline-danger btn-sm mb-1 mt-1 " type="submit">Delete</a>
+<a class="btn btn-outline-danger btn-sm mb-1 mt-1" href=" {% url 'E_detail'object.e_id %}">Cancel</a>
+      </div>
+
+      </div>
+  </div>
+
+{% endblock content%}

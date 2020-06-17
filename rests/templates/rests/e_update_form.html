@@ -1,0 +1,22 @@
+{% extends "rests/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <p>
+      
+    </p>
+    <div class="content-section bg-light text-dark">
+
+      <form method='POST'>
+       {% csrf_token %}
+       {{ form|crispy }}
+
+       <div><button class="btn btn-primary" type=submit>Save</button></div>
+      </form>
+    
+    </div>
+    
+  
+
+
+{%  endblock content%}

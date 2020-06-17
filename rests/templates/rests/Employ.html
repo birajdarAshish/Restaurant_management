@@ -1,0 +1,40 @@
+{% extends "rests/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <form method='POST'>
+      <div class="content-section">
+      <fiedset>
+      <table class="table table-stripped bg-light text-dark " id="centre">
+        <thead class="thead-dark">
+          <tr>
+            <th class="bg-primary text-white">Employee details</th>
+          </tr>
+        <tr >
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+        {% for e in emp%}
+        <div class="tbody">
+        <tr >
+         <td> <a class="btn btn-primary mb-1 " href="{% url 'E_detail' e.e_id %}">{{ e.name }}</a></td>
+          <td>{{ e.age }}</td>
+          <td>{{ e.salary }}</td>
+          <td>{{ e.d_no.dname}}</td>
+        </tr>
+      </div>
+      
+        {% endfor %}
+        </table>
+      </fiedset>
+    </div>
+     
+    
+  
+
+
+{%  endblock content%}
+

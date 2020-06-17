@@ -1,0 +1,23 @@
+{% extends "rests/base1.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+   
+    <p>
+      
+    </p>
+    <div class="container">
+      <form method='POST'>
+       {% csrf_token %}
+       {{ form|crispy }}
+
+       <div><button type=submit>Save</button></div>
+      </form>
+    
+        <p1><h6 class="small">Enter another ?</h6>
+      <a href=" {% url 'Employee'%}">Login</a></div>
+    </p1>
+    
+  
+
+
+{%  endblock content%}

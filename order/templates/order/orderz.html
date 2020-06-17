@@ -1,15 +1,15 @@
-{% extends "rest/base1.html" %}
+{% extends "rests/base1.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-   
-    <form class="content-section bg-dark text-white" method='POST' id="wrapper2">
+   <div class="wrapper2">
+    <form class="content-section bg-dark text-white" id="none"method='POST'>
       {% csrf_token %}
-  <div class="form-group row border-bottom mb-4">
+  <div class="form-group row border-bottom border-primary mb-4">
     <div class="col">
-      <h6> Item</h6>
+      <h4> Item</h4>
     </div>
     <div class="col">
-      <h6> Quantity</h6>
+      <h4> Quantity</h4>
     </div>
   </div>
      
@@ -36,6 +36,7 @@
         
        
       </form>
+    </div>
    
     
   

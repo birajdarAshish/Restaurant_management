@@ -18,7 +18,7 @@ class bill(models.Model):
 	date=models.DateTimeField(default=timezone.now)
 	
 	class Meta:
-		ordering = ['date']
+		ordering = ['-date']
 
 	def __str__(self):
 		return string(self.b_id)
